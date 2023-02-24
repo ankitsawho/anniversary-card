@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+* {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background: #6441A5;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.birthdayCard {
+	position: relative;
+	width: 250px;
+	height: 350px;
+	cursor: pointer;
+	border-radius: 20px;
+	transform-style: preserve-3d;
+	transform: perspective(2500px);
+	transition: 2s;
+}
+
+.birthdayCard:hover {
+	transform: perspective(2500px) rotate(5deg);
+	box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.birthdayCard:hover .cardFront {
+	transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .happy {
+	visibility: hidden;
+}
+
+.cardFront {
+	position: relative;
+	background: #FF8008;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	border-radius: 20px;
+	width: 250px;
+	height: 350px;
+	overflow: hidden;
+	transform-origin: left;
+	box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),30px 0 50px rgba(0, 0, 0, 0.4);
+	transition: 1s;
+}
+
+.happy {
+	color: #011328;
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+	margin-top: 10px;
+	padding: 10px;
+	font-size: 24px;
+	transition: 0.1s;
+	outline-color: #333;
+	outline-style: dotted;
+}
+
+.balloons {
+	position: absolute;
+}
+
+.balloonOne,
+.balloonTwo,
+.balloonThree,
+.balloonFour {
+	position: absolute;
+	width: 110px;
+	height: 110px;
+}
+
+.balloonOne {
+	left: 10px;
+	top: 110px;
+}
+
+.balloonTwo {
+	left: 25px;
+	top: 40px;
+}
+
+.balloonThree {
+	left: 90px;
+	top: 100px;
+}
+
+.balloonFour {
+	left: 120px;
+	top: 120px;
+	transform: rotate(90deg);
+}
+
+.balloonOne:after,
+.balloonTwo:after,
+.balloonThree:after,
+.balloonFour:after {
+	position: absolute;
+	border-right: 7px solid transparent;
+	border-left: 7px solid transparent;
+	top: 94px;
+	left: 37px;
+}
+
+.cardInside {
+	position: absolute;
+	background: #FF8008;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	border-radius: 20px;
+	width: 250px;
+	height: 350px;
+	z-index: -1;
+	left: 0;
+	top: 0;
+	box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+}
+
+p {
+	font-family: 'Caveat', cursive;
+	margin: 10px;
+	color: #333;
+	font-size: 20px;
+}
+
+.name {
+	position: absolute;
+	left: 150px;
+	top: 200px;
+	color: #333;
+}
+
+.back {
+	font-family: 'Pacifico', cursive;
+	color: #333;
+	text-align: center;
+	margin: 30px;
+	font-size: 16px;
+
+}
